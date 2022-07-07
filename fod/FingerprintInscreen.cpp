@@ -28,7 +28,7 @@
 using android::base::GetIntProperty;
 
 namespace vendor {
-namespace lineage {
+namespace mokee {
 namespace biometrics {
 namespace fingerprint {
 namespace inscreen {
@@ -56,9 +56,9 @@ static bool readBool(int fd) {
 
 FingerprintInscreen::FingerprintInscreen() {
     mXiaomiFingerprintService = IXiaomiFingerprint::getService();
-    mPositionX = GetIntProperty<int32_t>("vendor.lineage.fod.position_x", 0);
-    mPositionY = GetIntProperty<int32_t>("vendor.lineage.fod.position_y", 0);
-    mSize = GetIntProperty<int32_t>("vendor.lineage.fod.size", 0);
+    mPositionX = GetIntProperty<int32_t>("vendor.mokee.fod.position_x", 0);
+    mPositionY = GetIntProperty<int32_t>("vendor.mokee.fod.position_y", 0);
+    mSize = GetIntProperty<int32_t>("vendor.mokee.fod.size", 0);
 
     std::thread([this]() {
         int fd = open(FOD_UI_PATH, O_RDONLY);
@@ -187,5 +187,5 @@ Return<int32_t> FingerprintInscreen::getSize() {
 }  // namespace inscreen
 }  // namespace fingerprint
 }  // namespace biometrics
-}  // namespace lineage
+}  // namespace mokee
 }  // namespace vendor

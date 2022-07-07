@@ -11,5 +11,5 @@ service vendor.motor /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
     group system
     disabled
 
-on property:vendor.lineage.motor.enable=true
+on property:vendor.mokee.motor.enable=true
     enable vendor.motor

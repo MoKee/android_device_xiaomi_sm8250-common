@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.doze;
+package org.mokee.settings.doze;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -25,8 +25,8 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
 
-import org.lineageos.settings.sensors.PickupSensor;
-import org.lineageos.settings.sensors.ProximitySensor;
+import org.mokee.settings.sensors.PickupSensor;
+import org.mokee.settings.sensors.ProximitySensor;
 
 public class DozeService extends Service {
     private static final String TAG = "DozeService";
